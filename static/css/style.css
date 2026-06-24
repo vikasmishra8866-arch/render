@@ -1,0 +1,111 @@
+:root {
+    --bg-color: #0b0f19;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --primary-glow: #00f2fe;
+    --secondary-glow: #4facfe;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling & Hover Effect */
+.sidebar {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.02);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #8a99ad;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sidebar nav a:hover {
+    color: #fff;
+    background: var(--card-bg);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+    transform: translateX(8px);
+}
+
+/* Main Content & Interactive Button */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background: radial-gradient(circle at 80% 20%, rgba(79, 172, 254, 0.05), transparent);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+button {
+    background: linear-gradient(135deg, var(--secondary-glow), var(--primary-glow));
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 242, 254, 0.6);
+}
+
+/* Premium Mouse Touch/Hover Transition Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+}
+
+/* माउस टच/होवर करने पर 3D इफेक्ट और नियॉन ग्लो */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary-glow);
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.25),
+                inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    background: linear-gradient(45deg, #fff, #8a99ad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
