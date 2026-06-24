@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Glassmorphism Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Parivahan</h2>
+            <nav>
+                <a href="#" class="active">📊 Overview</a>
+                <a href="#">💼 Services</a>
+                <a href="#">⚙️ Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Welcome Back, Developer</h1>
+                <button id="refreshBtn">Fetch Backend Data</button>
+            </header>
+
+            <!-- Interactive Cards Grid -->
+            <div class="cards-grid">
+                <div class="card" id="card1">
+                    <h3>Server Status</h3>
+                    <p class="stat-value" id="statusVal">Testing...</p>
+                </div>
+                <div class="card" id="card2">
+                    <h3>Database Health</h3>
+                    <p class="stat-value" id="dbVal">Testing...</p>
+                </div>
+                <div class="card" id="card3">
+                    <h3>Active Sessions</h3>
+                    <p class="stat-value" id="usersVal">Testing...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
